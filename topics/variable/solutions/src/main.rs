@@ -6,5 +6,8 @@ fn main() {
     let mut count = 1;
     count += 1;
 
+    const NUM:u32 = 123;
+    let count = true;
+
     println!("count: {count}");
 }

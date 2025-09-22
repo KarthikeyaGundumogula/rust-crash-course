@@ -6,5 +6,10 @@ fn parse(s: &str) -> Result<u32, String> {
 }
 
 pub fn sum(nums: &[&str]) -> Result<u32, String> {
-    todo!();
+    let mut s: u32 = 0;
+    for i in nums{
+        s+= parse(i)?;
+    }
+    Ok(s)
 }
+// 🦀 canada

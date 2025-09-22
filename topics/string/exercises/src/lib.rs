@@ -1,11 +1,18 @@
+#![allow(unused)]
+use std::fmt::format;
+
+
 pub fn hello() -> String {
-    todo!();
+    let hello = "Hello";
+    let rust = "Rust";
+    format!("{} {}",hello,rust)
 }
 
 pub fn greet(name: &str) -> String {
-    todo!();
+    format!("Hello {}",name)
 }
 
 pub fn append(mut s: String) -> String {
-    todo!();
+    s+="!";
+    s
 }

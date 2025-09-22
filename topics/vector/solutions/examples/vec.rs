@@ -12,7 +12,9 @@ fn main() {
     let v: Vec<i32> = vec![-1, -2, -3];
 
     // Vec<u8>
-    let v = vec![1u8, 2, 3, 4];
+    let mut v = vec![1u8, 2, 3, 4];
+    v.push(23);
+    println!("vec: {:?}",v[4]);
 
     // Initialize with all 5 elements equal to 1
     let v = vec![1u8; 5];

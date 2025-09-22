@@ -1,5 +1,7 @@
 #![allow(unused)]
 
+use std::u32;
+
 // Scalar types represent a single value
 fn main() {
     // Signed integers
@@ -44,13 +46,18 @@ fn main() {
 
     // Overflow
     let mut u: u32 = u32::MAX;
-    u += 1;
+    // u += 1;
     // Overflow doesn't panic when compiled with --release
-    println!("u32 silent overflow: {}", u);
+    // println!("u32 silent overflow: {} and max value; {}", u,u32::MAX);
 
     // Return None on overflow
-    println!("u32 check overflow: {:?}", u32::checked_add(u32::MAX, 1));
+    let mut u = u32::checked_add(u32::MAX,123);
+    println!("u32 check overflow: {:?}", u);
+    u = u32::checked_sub(0,1);
+    println!("checked sub of 0-1 is {:?}",u);
+
+    let u = u32::wrapping_sub(0, 1);
 
     // Explicitly allow overflow
-    println!("u32 allow overflow: {}", u32::wrapping_add(u32::MAX, 1));
+    println!("u32 allow overflow: {}", u);
 }
